@@ -13,11 +13,12 @@ packaging = "packaging:main"
 requires = ["uv_build>=0.12.20,<0.13.0"]
 build-backend = "uv_build"
 
-[tool.uv.workspace]
-members = [
-    "src/packaging/package1",
-    "src/packaging/package2",
-    "src/packaging/package3",
-    "src/packaging/package4",
-    "src/packaging/package5",
+[tool.uv.build-backend]
+packages = [
+    "src/packaging",
+    "package1/src/package1",
+    "package2/src/package2",
+    "package3/src/package3",
+    "package4/src/package4",
+    "package5/src/package5"
 ]
