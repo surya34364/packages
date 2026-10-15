@@ -1,7 +1,7 @@
 [project]
 name = "packaging"
 version = "0.1.0"
-description = "Utility packages"
+description = "Monorepo containing utility packages"
 readme = "README.md"
 requires-python = ">=3.14"
 dependencies = []
@@ -13,5 +13,10 @@ packaging = "packaging:main"
 requires = ["setuptools>=61.0"]
 build-backend = "setuptools.build_meta"
 
-[tool.setuptools.packages.find]
-where = ["src/packaging"]
+[tool.setuptools.package-dir]
+packaging = "src/packaging"
+package1 = "src/packaging/package1/src/package1"
+package2 = "src/packaging/package2/src/package2"
+package3 = "src/packaging/package3/src/package3"
+package4 = "src/packaging/package4/src/package4"
+package5 = "src/packaging/package5/src/package5"
