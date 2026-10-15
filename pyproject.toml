@@ -13,10 +13,5 @@ packaging = "packaging:main"
 requires = ["setuptools>=61.0"]
 build-backend = "setuptools.build_meta"
 
-[tool.setuptools.package-dir]
-packaging = "src/packaging"
-package1 = "package1/src/package1"
-package2 = "package2/src/package2"
-package3 = "package3/src/package3"
-package4 = "package4/src/package4"
-package5 = "package5/src/package5"
+[tool.setuptools.packages.find]
+where = ["src", "package1/src", "package2/src", "package3/src", "package4/src", "package5/src"]
